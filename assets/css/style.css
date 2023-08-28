@@ -24,50 +24,45 @@ body {
   background-color: var(--very-dark-lue-main-BG);
   font-family: "Outfit", sans-serif;
 }
+
 .nft-item {
-  position: relative;
   width: 300px;
   border-radius: 15px;
   background-color: var(--very-dark-blue-card-BG);
-  overflow: hidden;
 }
 
 .nft-item-img {
   position: relative;
-  width: 100%;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.nft-item-img img {
-  width: 300px;
-  padding: 20px;
-  border-radius: 27px;
+  margin: 20px;
 }
 
 .overlay {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 25px;
-  background-color: hsla(178, 100%, 50%, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+  height: 98%;
+  background-color: hsl(178, 100%, 50%, 0.55);
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-  border-radius: 7px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  transition: opacity 0.2s ease;
 }
 
-.nft-item-img:hover .overlay {
-  cursor: pointer;
+.overlay:hover {
   opacity: 1;
 }
 
-.eye-icon {
-  width: 48px;
-  height: 48px;
-  fill: white;
+.nft-item-img .overlay svg {
+  width: 40px;
+}
+
+.nft-item-img img {
+  width: 100%;
+  border-radius: 16px;
 }
 
 .nft-item-info {
